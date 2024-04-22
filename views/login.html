@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        a {
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="/login" method="POST">
+        <div>
+            <input type="email" name="email" autocomplete="off" placeholder="Endereço de e-mail" required />
+        </div>
+        <div>
+            <input type="password" name="password" autocomplete="off" placeholder="Senha" required />
+        </div>
+        <button type="submit">Entrar</button>
+        <p>Não tem uma conta? <a href="/register">Cadastre-se</a></p>
+        <span>
+            <%= message %>
+        </span>
+    </form>
+</body>
+
+</html>

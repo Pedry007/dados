@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            display:flex;
+            justify-content: center;
+        }
+        a {
+            text-decoration: none;
+        }
+
+        #login {
+            display:flex;
+            flex-direction: column;
+            padding: 20px;
+            border: 2px;
+            border-color: black;
+            border-style: groove;
+
+            div {
+                padding: 2.5px;
+
+            }
+
+            button {
+                border-color: blue;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <form id="login" action="/register" method="POST">
+        <div>
+            <input type="text" name="name" autocomplete="off" placeholder="Nome" required />
+        </div>
+        <div>
+            <input type="text" name="username" autocomplete="off" placeholder="Nome de usuário" required />
+        </div>
+
+        <div>
+            <input type="email" name="email" autocomplete="off" placeholder="E-mail" required />
+        </div>
+        <div>
+            <input type="password" name="password" autocomplete="off" placeholder="Senha" required />
+        </div>
+        <div>
+            <input type="password" name="repassword" autocomplete="off" placeholder="Senha novamente" required />
+        </div>
+        <div>
+            <input type="date" name="birth" required />
+        </div>
+        <button type="submit">Criar Conta</button>
+        <p>Já tem uma conta? <a href="/login">Logar-se</a></p>
+        <span>
+            <%= message %>
+        </span>
+    </form>
+</body>
+
+</html>
